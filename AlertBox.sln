@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29123.88
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlertBox", "AlertBox\AlertBox.csproj", "{641FCED4-CEF7-4D98-A397-D9ED6C27D1F9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{641FCED4-CEF7-4D98-A397-D9ED6C27D1F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{641FCED4-CEF7-4D98-A397-D9ED6C27D1F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{641FCED4-CEF7-4D98-A397-D9ED6C27D1F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{641FCED4-CEF7-4D98-A397-D9ED6C27D1F9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {78E62A0E-2888-40E6-8288-2179F4A32A9E}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,149 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<style>
+    .paddingTopBottom {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .smallPaddingAround{
+        padding:5px;
+    }
+    .darkBackground{
+        background-color:#222126;
+    }
+    .darkBackgroundBtn{
+        background-color:#948cad;
+        color:black;
+    } 
+    /*Override default boostrap 3*/
+    .row{
+         margin-left:0px; /*default -15px*/
+        margin-right:0px; /*default -15px*/
+    }
+</style>
+
+<div class="row paddingTopBottom">
+
+    <!---Manual Close-->
+    <h3>Bootstrap Alert with Close Button on the Right</h3>
+
+    @Html.Partial("_SuccessBootstrapWithCloseBtn")
+    @Html.Partial("_DangerBootstrapWithCloseBtn")
+    @Html.Partial("_WarningBootstrapWithCloseBtn")
+    @Html.Partial("_InfoBootstrapWithCloseBtn")
+
+    <div class="btn btn-success smallPaddingAround" onclick="showSuccessBootstrapWithClose()">
+        Success Alert.
+    </div>
+    <div class="btn btn-danger smallPaddingAround" onclick="showDangerBootstrapWithClose()">
+        Danger Alert.
+    </div>
+    <div class="btn btn-warning smallPaddingAround" onclick="showWarningBootstrapWithClose()">
+        Warning Alert.
+    </div>
+    <div class="btn btn-info smallPaddingAround" onclick="showInfoBootstrapWithClose()">
+        Info Alert.
+    </div>
+
+    <!---Auto Close-->
+    <h3>Automatic Disappeared/Closed Bootstrap Alert</h3>
+
+    @Html.Partial("_SuccessAutoCloseAlert")
+    @Html.Partial("_DangerAutoCloseAlert")
+    @Html.Partial("_WarningAutoCloseAlert")
+    @Html.Partial("_InfoAutoCloseAlert")
+
+    <div class="btn btn-success smallPaddingAround" onclick="showAutoCloseSuccessAlert()">
+        Success Alert
+    </div>
+    <div class="btn btn-danger smallPaddingAround" onclick="showAutoCloseDangerAlert()">
+        Danger Alert
+    </div>
+    <div class="btn btn-warning smallPaddingAround" onclick="showAutoCloseWarningAlert()">
+        Warning Alert
+    </div>
+    <div class="btn btn-info smallPaddingAround" onclick="showAutoCloseInfoAlert()">
+        Info Alert
+    </div>
+
+    <!---Modal-->
+    <h3>Bootstrap Modal Popup Box</h3>
+
+    <div class="row">
+        <span class="text-success"><b>Success Modal:</b></span>
+        <div class="btn btn-default smallPaddingAround" data-toggle="modal" data-target="#successLightModal">
+            Success Light Theme.
+        </div>
+        <div class="btn darkBackgroundBtn smallPaddingAround" data-toggle="modal" data-target="#successDarkModal">
+            Success Dark Theme.
+        </div>
+    </div>
+
+    <div class="row paddingTopBottom">
+        <span class="text-danger"><b>Danger Modal:</b></span>
+        <div class="btn btn-default smallPaddingAround" data-toggle="modal" data-target="#dangerLightModal">
+            Danger Light Theme.
+        </div>
+        <div class="btn darkBackgroundBtn smallPaddingAround" data-toggle="modal" data-target="#dangerDarkModal">
+            Danger Dark Theme.
+        </div>
+    </div>
+
+    @Html.Partial("_SuccessLightModal")
+    @Html.Partial("_SuccessDarkModal")
+    @Html.Partial("_DangerLightModal")
+    @Html.Partial("_DangerDarkModal")
+
+</div>
+
+<script>
+    //------------------Success with Icon and Close------------------
+    function showSuccessBootstrapWithClose() {
+        $("#successBootstrapWithClose").show();
+    }
+    function closeSuccessBootstrapWithClose() {
+        $("#successBootstrapWithClose").hide();
+    }
+    //------------------Danger with Icon and Close------------------
+    function showDangerBootstrapWithClose() {
+        $("#dangerBootstrapWithClose").show();
+    }
+    function closeDangerBootstrapWithClose() {
+        $("#dangerBootstrapWithClose").hide();
+    }
+    //------------------Warning with Icon and Close------------------
+    function showWarningBootstrapWithClose() {
+        $("#warningBootstrapWithClose").show();
+    }
+    function closeWarningBootstrapWithClose() {
+        $("#warningBootstrapWithClose").hide();
+    }
+    //------------------Info with Icon and Close------------------
+     function showInfoBootstrapWithClose() {
+        $("#infoBootstrapWithClose").show();
+    }
+    function closeInfoBootstrapWithClose() {
+        $("#infoBootstrapWithClose").hide();
+    }
+    //------------------Auto Close Success Alert------------------
+    function showAutoCloseSuccessAlert() {
+        $("#successAutoClose").show();
+        $("#successAutoClose").delay(1500).fadeOut(); //fade out after 1.5 seconds    
+    }
+    //------------------Auto Close Danger Alert------------------
+    function showAutoCloseDangerAlert() {
+        $("#dangerAutoClose").show();
+        $("#dangerAutoClose").delay(1500).fadeOut(); //fade out after 1.5 seconds    
+    }
+    //------------------Auto Close Warning Alert------------------
+    function showAutoCloseWarningAlert() {
+        $("#warningAutoClose").show();
+        $("#warningAutoClose").delay(1500).fadeOut(); //fade out after 1.5 seconds    
+    }
+    //------------------Auto Close Info Alert------------------
+    function showAutoCloseInfoAlert() {
+        $("#infoAutoClose").show();
+        $("#infoAutoClose").delay(1500).fadeOut(); //fade out after 1.5 seconds    
+    }
+</script>
